@@ -1,0 +1,47 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "import"
+    ],
+    "rules": {
+      "react/prop-types": "error",
+      "react/jsx-handler-names": "warn",
+      "react/no-unused-state": "warn",
+      "import/no-cycle": "error",
+      "import/no-self-import": "error",
+      "import/no-useless-path-segments": "error",
+      "max-lines-per-function": ["error", {
+        "max": 50,
+        "skipBlankLines": true,
+        "skipComments": true
+      }],
+      "max-depth": ["error", 3],
+      "max-lines": ["error", {
+        "max": 300,
+        "skipBlankLines": true,
+        "skipComments": true
+      }]
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
